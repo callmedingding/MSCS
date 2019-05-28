@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <TextView
+        android:id="@+id/coursedeleteTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="28dp"
+        android:text="删除课程信息"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/coursedeleteTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/coursedeleteTV1"
+        android:layout_marginTop="34dp"
+        android:text="请输入要删除的课程的ID："
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/coursedeleteET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/coursedeleteTV2"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/coursedeletebtn"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/coursedeleteET"
+        android:layout_alignBottom="@+id/coursedeleteET"
+        android:layout_toRightOf="@+id/coursedeleteTV2"
+        android:background="@drawable/btn"
+        android:onClick="courseDeleteLoad"
+        android:text="删除"
+        android:textSize="20dp" />
+
+</RelativeLayout>

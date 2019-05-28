@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/courseupdateTV0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/courseupdateTV4"
+            android:text="新建课程信息"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseupdateTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET1"
+            android:layout_alignBottom="@+id/courseupdateET1"
+            android:text="课  程  号:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseupdateTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/courseupdateET1"
+            android:text="课        名:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseupdateTV3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET3"
+            android:layout_alignBottom="@+id/courseupdateET3"
+            android:layout_alignParentLeft="true"
+            android:text="课程类型:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseupdateTV4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程状态:"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@+id/courseupdateET4"
+            android:layout_alignBottom="@+id/courseupdateET4"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/courseupdateTV5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET5"
+            android:layout_alignBottom="@+id/courseupdateET5"
+            android:layout_alignParentLeft="true"
+            android:text="学        时:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseupdateTV6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET6"
+            android:layout_alignBottom="@+id/courseupdateET6"
+            android:layout_alignParentLeft="true"
+            android:text="学        分:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseupdateTV7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET7"
+            android:layout_alignBottom="@+id/courseupdateET7"
+            android:layout_alignParentLeft="true"
+            android:text="上限人数:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseupdateTV8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET8"
+            android:layout_alignBottom="@+id/courseupdateET8"
+            android:layout_alignParentLeft="true"
+            android:text="上课时间:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseupdateTV9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseupdateET9"
+            android:layout_alignBottom="@+id/courseupdateET9"
+            android:layout_alignParentLeft="true"
+            android:text="上课地点:"
+            android:textSize="20dp" />
+
+
+
+
+        <EditText
+            android:id="@+id/courseupdateET9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseupdateET8"
+            android:layout_below="@+id/courseupdateET8"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseupdateET7"
+            android:layout_below="@+id/courseupdateET7"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseupdateET6"
+            android:layout_below="@+id/courseupdateET6"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+
+
+
+        <EditText
+            android:id="@+id/courseupdateET6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseupdateET5"
+            android:layout_below="@+id/courseupdateET5"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseupdateET4"
+            android:layout_toRightOf="@+id/courseupdateTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseupdateET3"
+            android:layout_toRightOf="@+id/courseupdateTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseupdateET2"
+            android:layout_below="@+id/courseupdateET2"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/courseupdateTV2"
+            android:layout_toRightOf="@+id/courseupdateTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseupdateET1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseupdateTV0"
+            android:layout_below="@+id/courseupdateTV0"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" >
+
+        </EditText>
+
+        <Button
+            android:id="@+id/courseupdatebtn"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/courseupdateET9"
+            android:layout_below="@+id/courseupdateET9"
+            android:background="@drawable/btn"
+            android:onClick="courseUpdateLoad"
+            android:text="更新"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</ScrollView>

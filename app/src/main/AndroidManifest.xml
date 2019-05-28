@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a11201.godsavemeapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateDBActivity"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name=".SearchDataActivity" />
+        <activity
+            android:name=".ShowCourseActivity"
+            android:label="@string/title_activity_show_course" />
+        <activity
+            android:name=".ShowTeacherActivity"
+            android:label="@string/title_activity_show_teacher" />
+        <activity
+            android:name=".MyCourseActivity"
+            android:label="@string/title_activity_my_course" />
+        <activity
+            android:name=".SelectCourseActivity"
+            android:label="@string/title_activity_select_course" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".InfoHandleActivity"
+            android:label="@string/title_activity_info_handle" />
+        <activity android:name="com.example.ssc.infohandle.DeleteStu" />
+        <activity android:name="com.example.ssc.infohandle.SelectStu" />
+        <activity android:name="com.example.ssc.infohandle.InsertStu" />
+        <activity android:name="com.example.ssc.infohandle.UpdateStu" />
+        <activity
+            android:name="com.example.ssc.infohandle.DeleteTea"
+            android:label="@string/title_activity_delete_tea" />
+        <activity
+            android:name="com.example.ssc.infohandle.InsertTea"
+            android:label="@string/title_activity_insert_tea" />
+        <activity
+            android:name="com.example.ssc.infohandle.SelectTea"
+            android:label="@string/title_activity_select_tea" />
+        <activity
+            android:name="com.example.ssc.infohandle.UpdateTea"
+            android:label="@string/title_activity_update_tea" />
+        <activity
+            android:name="com.example.ssc.infohandle.DeleteCourse"
+            android:label="@string/title_activity_delete_course" />
+        <activity
+            android:name="com.example.ssc.infohandle.InsertCourse"
+            android:label="@string/title_activity_insert_course" />
+        <activity
+            android:name="com.example.ssc.infohandle.SelectCourse"
+            android:label="@string/title_activity_select_course" />
+        <activity
+            android:name="com.example.ssc.infohandle.UpdateCourse"
+            android:label="@string/title_activity_update_course" />
+        <activity
+            android:name=".CourseDetailActivity"
+            android:label="@string/title_activity_course_detail" />
+        <activity
+            android:name=".TeacherDetailActivity"
+            android:label="@string/title_activity_teacher_detail" />
+        <activity android:name=".SearchDataActivity" />
+        <activity android:name=".InsertAnnouncement" />
+        <activity android:name=".ShowAnnouncementActivity" />
+        <activity android:name=".AnnouncementDetailActivity" />
+        <activity android:name=".TestLoginActivity"/>
+    </application>
+
+</manifest>

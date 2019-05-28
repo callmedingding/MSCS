@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/general_bg"
+    android:orientation="vertical"
+    android:padding="0px" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_bg" >
+
+        <FrameLayout
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/home_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="学生选课系统"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btset"
+                android:visibility="gone"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/title_back_set_up" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="13"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="40dip" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/show_personal_info"
+                android:layout_width="120dip"
+                android:layout_height="120dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginRight="2dip"
+                android:background="@drawable/upper_left"
+                android:gravity="top|center_horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="9dip"
+                android:text="个人信息"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/my_course"
+                android:layout_width="120dip"
+                android:layout_height="120dip"
+                android:layout_below="@+id/show_personal_info"
+                android:layout_marginRight="2dip"
+                android:layout_marginTop="2dip"
+                android:background="@drawable/lower_left"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="9dip"
+                android:paddingLeft="10dip"
+                android:text="我的课程"
+                android:textColor="#ffffff"
+                android:textSize="24sp" /><!--原为我的课程，现改为个人信息-->
+
+            <Button
+                android:id="@+id/show_announcement"
+                android:layout_width="120dip"
+                android:layout_height="120dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginLeft="2dip"
+                android:layout_toRightOf="@+id/my_course"
+                android:background="@drawable/upper_right"
+                android:gravity="top|center_horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="9dip"
+                android:text="我的公告"
+                android:textColor="#ffffff"
+                android:textSize="24sp" /><!--原为查看老师，现改为我的公告-->
+            <Button
+                android:id="@+id/select_course"
+                android:layout_width="120dip"
+                android:layout_height="120dip"
+                android:layout_marginLeft="2dip"
+                android:background="@drawable/lower_right"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="9dip"
+                android:paddingLeft="10dip"
+                android:text="立即选课"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:layout_below="@+id/show_announcement"
+                android:layout_alignStart="@+id/show_announcement" /><!--仅管理员-->
+
+            <Button
+                android:id="@+id/info_handle_btn"
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/home_page_button"
+                android:gravity="center"
+                android:text="信息维护"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

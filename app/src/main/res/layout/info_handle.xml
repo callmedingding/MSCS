@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ffffff"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@+id/menuTV"
+            android:layout_width="200dp"
+            android:layout_height="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textColor="#ff0"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/menubtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/menubtn7"
+            android:layout_below="@+id/menubtn3"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload5"
+            android:text="添加\n课程"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/menubtn1"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload3"
+            android:text="修改\n账号"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/menubtn3"
+            android:layout_below="@+id/menubtn5"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload7"
+            android:text="修改\n课程"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/menubtn1"
+            android:layout_alignBottom="@+id/menubtn1"
+            android:layout_alignLeft="@+id/menubtn4"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload2"
+            android:text="删除\n账号"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/menubtn7"
+            android:layout_alignBottom="@+id/menubtn7"
+            android:layout_alignLeft="@+id/menubtn6"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload8"
+            android:text="查询\n课程"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/menubtn3"
+            android:layout_alignBottom="@+id/menubtn3"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="52dp"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload4"
+            android:text="查询\n账号"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/menubtn5"
+            android:layout_alignBottom="@+id/menubtn5"
+            android:layout_alignLeft="@+id/menubtn4"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload6"
+            android:text="删除\n课程"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/menubtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/menubtn3"
+            android:layout_below="@+id/menuTV"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="menuload1"
+            android:text="添加\n账号"
+            android:textSize="20dp" />
+
+        <!--<Button-->
+            <!--android:id="@+id/menubtn10"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBaseline="@+id/menubtn9"-->
+            <!--android:layout_alignBottom="@+id/menubtn9"-->
+            <!--android:layout_alignLeft="@+id/menubtn8"-->
+            <!--android:background="@drawable/btn"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:onClick="menuload10"-->
+            <!--android:text="删除\n老师"-->
+            <!--android:textSize="20dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/menubtn11"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/menubtn7"-->
+            <!--android:layout_below="@+id/menubtn9"-->
+            <!--android:layout_marginTop="22dp"-->
+            <!--android:background="@drawable/btn"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:onClick="menuload11"-->
+            <!--android:text="修改\n老师"-->
+            <!--android:textSize="20dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/menubtn12"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBaseline="@+id/menubtn11"-->
+            <!--android:layout_alignBottom="@+id/menubtn11"-->
+            <!--android:layout_alignLeft="@+id/menubtn10"-->
+            <!--android:background="@drawable/btn"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:onClick="menuload12"-->
+            <!--android:text="查询\n老师"-->
+            <!--android:textSize="20dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/menubtn9"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/menubtn7"-->
+            <!--android:layout_below="@+id/menubtn7"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="@drawable/btn"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:onClick="menuload9"-->
+            <!--android:text="添加\n老师"-->
+            <!--android:textSize="20dp" />-->
+
+    </RelativeLayout>
+
+</ScrollView>

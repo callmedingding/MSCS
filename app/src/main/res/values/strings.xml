@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">学生选课系统</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_show_course">ShowCourseActivity</string>
+    <string name="title_activity_show_teacher">查看老师</string>
+    <string name="title_activity_my_course">我的课程</string>
+    <string name="title_activity_select_course">立即选课</string>
+    <string name="title_activity_select_course_tip">选课须知</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_info_handle">信息维护</string>
+    <string name="title_activity_delete_tea">删除老师</string>
+    <string name="title_activity_insert_tea">插入老师</string>
+    <string name="title_activity_select_tea">选择老师</string>
+    <string name="title_activity_update_tea">更新老师</string>
+    <string name="title_activity_delete_course">删除课程</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_insert_course">插入课程</string>
+    <string name="title_activity_update_course">更新课程</string>
+    <string name="title_activity_course_detail">课程详情</string>
+    <string name="title_activity_teacher_detail">老师详情</string>
+    <string name="login">登录</string>
+
+</resources>

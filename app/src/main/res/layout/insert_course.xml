@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp" >
+
+        <TextView
+            android:id="@+id/courseinsertTV0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/courseinsertTV4"
+            android:text="新建课程信息"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseinsertTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET1"
+            android:layout_alignBottom="@+id/courseinsertET1"
+            android:text="课  程  号:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseinsertTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/courseinsertET1"
+            android:text="课        名:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseinsertTV3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET3"
+            android:layout_alignBottom="@+id/courseinsertET3"
+            android:layout_alignParentLeft="true"
+            android:text="课程类型:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseinsertTV4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程状态:"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@+id/courseinsertET4"
+            android:layout_alignBottom="@+id/courseinsertET4"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/courseinsertTV5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET5"
+            android:layout_alignBottom="@+id/courseinsertET5"
+            android:layout_alignParentLeft="true"
+            android:text="学        时:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseinsertTV6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET6"
+            android:layout_alignBottom="@+id/courseinsertET6"
+            android:layout_alignParentLeft="true"
+            android:text="学        分:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/courseinsertTV7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET7"
+            android:layout_alignBottom="@+id/courseinsertET7"
+            android:layout_alignParentLeft="true"
+            android:text="上限人数:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseinsertTV8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET8"
+            android:layout_alignBottom="@+id/courseinsertET8"
+            android:layout_alignParentLeft="true"
+            android:text="上课时间:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/courseinsertTV9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET9"
+            android:layout_alignBottom="@+id/courseinsertET9"
+            android:layout_alignParentLeft="true"
+            android:text="上课地点:"
+            android:textSize="20dp" />
+
+        <!--time_and_classroom自动生成-->
+
+
+
+        <EditText
+            android:id="@+id/courseinsertET9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertET8"
+            android:layout_below="@+id/courseinsertET8"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertET7"
+            android:layout_below="@+id/courseinsertET7"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertET6"
+            android:layout_below="@+id/courseinsertET6"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+
+
+
+        <EditText
+            android:id="@+id/courseinsertET6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertET5"
+            android:layout_below="@+id/courseinsertET5"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseinsertET4"
+            android:layout_toRightOf="@+id/courseinsertTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseinsertET3"
+            android:layout_toRightOf="@+id/courseinsertTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertET2"
+            android:layout_below="@+id/courseinsertET2"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/courseinsertTV2"
+            android:layout_toRightOf="@+id/courseinsertTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/courseinsertET1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertTV0"
+            android:layout_below="@+id/courseinsertTV0"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" >
+
+        </EditText>
+
+
+        <Button
+            android:id="@+id/courseinsertbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/courseinsertET9"
+            android:layout_toRightOf="@+id/courseinsertTV5"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="courseInsertLoad"
+            android:text="添加"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+</ScrollView>
