@@ -7,18 +7,46 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@drawable/general_bg"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    android:paddingTop="5dp"
     tools:context=".InsertAnnouncement">
-    <EditText
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/title_bg" >
+
+        <TextView
+            android:id="@+id/kaitou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="发布公告"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" /><!--标题栏-->
+
+        <Button
+            android:id="@+id/fanhui"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/title_back" /><!--返回-->
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/commentsET"
+        android:layout_width="358dp"
+        android:layout_height="230dp"
         android:padding="8dp"
+        android:layout_marginTop="15dp"
         android:hint="说点什么吧..."
         android:background="@drawable/edittext_biankuang"/>
 
     <Button
+        android:id="@+id/submitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"

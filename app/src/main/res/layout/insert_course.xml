@@ -105,10 +105,27 @@
             android:layout_alignParentLeft="true"
             android:text="上课地点:"
             android:textSize="20dp" />
-
+        <TextView
+            android:id="@+id/courseinsertTV10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courseinsertET10"
+            android:layout_alignBottom="@+id/courseinsertET10"
+            android:layout_alignParentLeft="true"
+            android:text="任课教师:"
+            android:textSize="20dp" />
         <!--time_and_classroom自动生成-->
 
-
+        <EditText
+            android:id="@+id/courseinsertET10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseinsertET9"
+            android:layout_below="@+id/courseinsertET9"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|none"
+            android:singleLine="true" />
 
         <EditText
             android:id="@+id/courseinsertET9"
@@ -221,8 +238,8 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/courseinsertET9"
-            android:layout_toRightOf="@+id/courseinsertTV5"
+            android:layout_below="@+id/courseinsertET10"
+            android:layout_toRightOf="@+id/courseinsertTV10"
             android:background="@drawable/btn"
             android:focusable="false"
             android:focusableInTouchMode="false"

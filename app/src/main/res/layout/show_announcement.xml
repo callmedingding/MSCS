@@ -18,16 +18,24 @@
             android:gravity="center"
             android:text="查看公告"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="30sp" /><!--标题栏-->
 
         <Button
             android:id="@+id/fanhui"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/title_back" /><!--返回-->
+        <Button
+            android:id="@+id/create"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_gravity="right"
             android:layout_marginRight="6dp"
             android:layout_marginTop="7dp"
-            android:background="@drawable/title_back" /><!--返回-->
+            android:background="@drawable/ic_create_black_24dp" />
     </FrameLayout>
 
     <LinearLayout
@@ -37,9 +45,8 @@
 
         <ListView
             android:id="@+id/listviews"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="393dp"
             android:cacheColorHint="#00000000"
             android:fadingEdge="none"
             android:listSelector="#00000000" >

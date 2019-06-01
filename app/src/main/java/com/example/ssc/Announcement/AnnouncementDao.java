@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-
 public class AnnouncementDao {
     private MyDBHelper myhelper;
 
@@ -26,9 +25,10 @@ public class AnnouncementDao {
         db.close();
     }
 
-    public void delete(String id) {
+    public void delete(Announcement ann) {
         SQLiteDatabase db = myhelper.getWritableDatabase();
-        db.execSQL("delete from tb_Announcement where id = ?", new Object[] { id });
+        db.execSQL("delete from tb_Announcement where user_id = ? and comments=?",
+                new Object[] { ann.getUser_id(),ann.getComments() });
         db.close();
     }
 
@@ -48,18 +48,16 @@ public class AnnouncementDao {
         cursor.moveToFirst();
         // 生成动态数组，加入数据
         ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
-        for (int i = 0; i < cursor.getCount(); i++) {//改
-            String publisher_id = Integer.toString(cursor.getColumnIndex("user_id"));
+        for (int i = 0; i < cursor.getCount(); i++) {
+            String publisher_id = cursor.getString((cursor.getColumnIndex("user_id")));
             String comments = cursor.getString(cursor.getColumnIndex("comments"));
 
             HashMap<String, String> map = new HashMap<String, String>();
             map.put("publisher_id", publisher_id);
             map.put("comments", comments);
             listItem.add(map);
-
-            cursor.moveToNext();
+            cursor.moveToNext();//往后移
         }
-
         return listItem;
     }
 }

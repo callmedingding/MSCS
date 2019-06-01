@@ -8,7 +8,14 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:background="@drawable/title_bg" >
-
+        <Button
+            android:id="@+id/fanhui"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/title_back" />
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"

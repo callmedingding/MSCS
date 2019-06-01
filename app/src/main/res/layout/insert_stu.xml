@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:scrollbars="none" >
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,6 +13,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp" >
 
+        <!--标题-->
         <TextView
             android:id="@+id/stuinsertTV0"
             android:layout_width="wrap_content"
@@ -23,35 +23,89 @@
             android:text="插入用户信息"
             android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/stuinsertTV1"
+
+
+        <!--账号类型-->
+        <Spinner
+            android:id="@+id/stuinsertSP1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stuinsertET3"
+            android:layout_toRightOf="@+id/stuinsertTV4"
+            android:ems="10"
+            android:gravity="top"
+            android:spinnerMode="dialog"/>
+
+        <!--性别-->
+        <Spinner
+            android:id="@+id/stuinsertSP2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stuinsertSP1"
+            android:layout_toRightOf="@+id/stuinsertTV5"
+            android:ems="10"
+            android:gravity="top"
+            android:spinnerMode="dialog"/>
+
+        <!--班级-->
+        <Spinner
+            android:id="@+id/stuinsertSP3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stuinsertET7"
+            android:layout_toRightOf="@+id/stuinsertTV8"
+            android:ems="10"
+            android:gravity="top"
+            android:spinnerMode="dialog"/>
+
+        <!--学院-->
+        <Spinner
+            android:id="@+id/stuinsertSP4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stuinsertET8"
+            android:layout_toRightOf="@+id/stuinsertTV9"
+            android:ems="10"
+            android:gravity="top"
+            android:spinnerMode="dialog"/>
+
+        <!--账号状态-->
+        <Spinner
+            android:id="@+id/stuinsertSP5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stuinsertET9"
+            android:layout_toRightOf="@+id/stuinsertTV10"
+            android:ems="10"
+            android:gravity="top"
+            android:spinnerMode="dialog"/>
+
+        <!--可选课程-->
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/stuinsertET1"
-            android:layout_alignBottom="@+id/stuinsertET1"
-            android:text="账        号:"
-            android:textSize="20dp" />
+            android:id="@+id/course_type_set"
+            android:text="选择"
+            android:textSize="10dp"
+            android:layout_below="@+id/stuinsertET10"
+            android:layout_toRightOf="@+id/stuinsertTV11"
+            android:layout_alignBottom="@+id/stuinsertTV11"
+            android:onClick="CreateDialog"/>
 
-
-
-        <TextView
-            android:id="@+id/stuinsertTV2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/stuinsertET1"
-            android:text="姓        名:"
-            android:textSize="20dp" />
+        <!--可选课程-->
         <EditText
             android:id="@+id/stuinsertET11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/stuinsertET10"
-            android:layout_toRightOf="@+id/stuinsertTV11"
             android:ems="10"
             android:gravity="top"
             android:inputType="textMultiLine|none"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:layout_below="@+id/stuinsertET10"
+            android:layout_toEndOf="@+id/stuinsertTV11"
+            android:visibility="invisible"/>
+
+        <!--账号状态-->
         <EditText
             android:id="@+id/stuinsertET10"
             android:layout_width="wrap_content"
@@ -62,7 +116,10 @@
             android:gravity="top"
             android:inputType="textMultiLine|none"
             android:singleLine="true"
-            android:layout_alignEnd="@+id/stuinsertET11" />
+            android:layout_alignEnd="@+id/stuinsertET11"
+            android:visibility="invisible"/>
+
+        <!--学院-->
         <EditText
             android:id="@+id/stuinsertET9"
             android:layout_width="wrap_content"
@@ -73,8 +130,10 @@
             android:gravity="top"
             android:inputType="textMultiLine|none"
             android:singleLine="true"
-            android:layout_alignEnd="@+id/stuinsertET10" />
+            android:layout_alignEnd="@+id/stuinsertET10"
+            android:visibility="invisible"/>
 
+        <!--班级-->
         <EditText
             android:id="@+id/stuinsertET8"
             android:layout_width="wrap_content"
@@ -85,8 +144,10 @@
             android:gravity="top"
             android:inputType="textMultiLine|none"
             android:singleLine="true"
-            android:layout_alignEnd="@+id/stuinsertET9" />
+            android:layout_alignEnd="@+id/stuinsertET9"
+            android:visibility="invisible"/>
 
+        <!--email-->
         <EditText
             android:id="@+id/stuinsertET7"
             android:layout_width="wrap_content"
@@ -100,6 +161,7 @@
             android:layout_alignEnd="@+id/stuinsertET8"
             android:layout_toRightOf="@+id/stuinsertTV4"/>
 
+        <!--电话-->
         <EditText
             android:id="@+id/stuinsertET6"
             android:layout_width="wrap_content"
@@ -113,18 +175,21 @@
             android:layout_alignEnd="@+id/stuinsertET8"
             android:layout_toRightOf="@+id/stuinsertTV4"/>
 
+        <!--性别-->
         <EditText
             android:id="@+id/stuinsertET5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/stuinsertET4"
-            android:layout_toRightOf="@+id/stuinsertTV4"
+            android:layout_toRightOf="@+id/stuinsertTV5"
             android:ems="10"
             android:gravity="top"
             android:inputType="textMultiLine|none"
             android:singleLine="true"
-            android:layout_alignEnd="@+id/stuinsertET8" />
+            android:layout_alignEnd="@+id/stuinsertET8"
+            android:visibility="invisible"/>
 
+        <!--账号类型-->
         <EditText
             android:id="@+id/stuinsertET4"
             android:layout_width="wrap_content"
@@ -135,8 +200,10 @@
             android:gravity="top"
             android:inputType="textMultiLine|none"
             android:singleLine="true"
-            android:layout_alignEnd="@+id/stuinsertET5" />
+            android:layout_alignEnd="@+id/stuinsertET5"
+            android:visibility="invisible"/>
 
+        <!--密码-->
         <EditText
             android:id="@+id/stuinsertET3"
             android:layout_width="wrap_content"
@@ -145,11 +212,13 @@
             android:layout_below="@+id/stuinsertET2"
             android:ems="10"
             android:gravity="top"
-            android:inputType="textMultiLine|none"
+            android:inputType="textMultiLine|textPassword"
             android:singleLine="true"
             android:layout_alignEnd="@+id/stuinsertET4"
-            android:layout_toRightOf="@+id/stuinsertTV4"/>
+            android:layout_toRightOf="@+id/stuinsertTV4"
+            />
 
+        <!--姓名-->
         <EditText
             android:id="@+id/stuinsertET2"
             android:layout_width="wrap_content"
@@ -162,6 +231,7 @@
             android:singleLine="true"
             android:layout_alignEnd="@+id/stuinsertET4" />
 
+        <!--用户名-->
         <EditText
             android:id="@+id/stuinsertET1"
             android:layout_width="wrap_content"
@@ -175,6 +245,7 @@
             android:singleLine="true"
             android:layout_alignEnd="@+id/stuinsertET2"
             android:layout_toRightOf="@+id/stuinsertTV4"/>
+
         <TextView
             android:id="@+id/stuinsertTV11"
             android:layout_width="wrap_content"
@@ -211,7 +282,6 @@
             android:layout_alignParentLeft="true"
             android:text="班        级:"
             android:textSize="20dp" />
-
         <TextView
             android:id="@+id/stuinsertTV7"
             android:layout_width="wrap_content"
@@ -221,7 +291,6 @@
             android:layout_alignParentLeft="true"
             android:text="电子邮箱:"
             android:textSize="20dp" />
-
         <TextView
             android:id="@+id/stuinsertTV6"
             android:layout_width="wrap_content"
@@ -231,7 +300,6 @@
             android:layout_alignParentLeft="true"
             android:text="电        话:"
             android:textSize="20dp" />
-
         <TextView
             android:id="@+id/stuinsertTV5"
             android:layout_width="wrap_content"
@@ -241,7 +309,6 @@
             android:layout_alignParentLeft="true"
             android:text="性        别:"
             android:textSize="20dp" />
-
         <TextView
             android:id="@+id/stuinsertTV4"
             android:layout_width="wrap_content"
@@ -251,7 +318,6 @@
             android:layout_alignBaseline="@+id/stuinsertET4"
             android:layout_alignBottom="@+id/stuinsertET4"
             android:layout_alignParentStart="true" />
-
         <TextView
             android:id="@+id/stuinsertTV3"
             android:layout_width="wrap_content"
@@ -261,19 +327,39 @@
             android:layout_alignBaseline="@+id/stuinsertET3"
             android:layout_alignBottom="@+id/stuinsertET3"
             android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/stuinsertTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/stuinsertET1"
+            android:text="姓        名:"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/stuinsertTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/stuinsertET1"
+            android:layout_alignBottom="@+id/stuinsertET1"
+            android:text="账        号:"
+            android:textSize="20dp" />
+
+        <!--submit-->
         <Button
-        android:id="@+id/stuinsertbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_below="@+id/stuinsertET11"
-        android:layout_toRightOf="@+id/stuinsertTV11"
-        android:background="@drawable/btn"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:onClick="stuInsertLoad"
-        android:text="提交"
-        android:textSize="25dp"
-        android:padding="1dp"/>
+            android:id="@+id/stuinsertbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/stuinsertET11"
+            android:layout_toRightOf="@+id/stuinsertTV11"
+            android:background="@drawable/btn"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="stuInsertLoad"
+            android:text="提交"
+            android:textSize="25dp"
+            android:padding="1dp"
+            android:layout_margin="15dp"/>
+
     </RelativeLayout>
 
 </ScrollView>

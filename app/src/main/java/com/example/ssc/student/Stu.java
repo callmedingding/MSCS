@@ -1,34 +1,21 @@
 package com.example.ssc.student;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Stu {
 
-	@SerializedName("user_id")
 	private String user_id;
-	@SerializedName("name")
 	private String name;
-	@SerializedName("user_key")
 	private String user_key;
-	@SerializedName("type_id")
-	private Integer type_id;
-	@SerializedName("sex_id")
-	private Integer sex_id;
-	@SerializedName("tel")
-	private Integer tel;
-	@SerializedName("email")
+	private String type_id;
+	private String sex_id;
+	private String tel;
 	private String email;
-	@SerializedName("class_id")
-	private Integer class_id;
-	@SerializedName("college_id")
-	private Integer college_id;
-	@SerializedName("status_id")
-	private Integer status_id;
-	@SerializedName("course_type_set")
+	private String class_id;
+	private String college_id;
+	private String status_id;
 	private String course_type_set;
 
-	public Stu(String user_id, String name, String user_key, Integer type_id, Integer sex_id, Integer tel,
-               String email, Integer class_id, Integer college_id, Integer status_id, String course_type_set) {
+	public Stu(String user_id, String name, String user_key, String type_id, String sex_id, String tel,
+               String email, String class_id, String college_id, String status_id, String course_type_set) {
 		this.user_id=user_id;
 		this.name=name;
 		this.user_key=user_key;
@@ -68,27 +55,27 @@ public class Stu {
 		this.user_key = user_key;
 	}
 
-	public Integer getType_id() {
+	public String getType_id() {
 		return type_id;
 	}
 
-	public void setType_id(Integer type_id) {
+	public void setType_id(String type_id) {
 		this.type_id = type_id;
 	}
 
-	public Integer getSex_id() {
+	public String getSex_id() {
 		return sex_id;
 	}
 
-	public void setSex_id(Integer sex_id) {
+	public void setSex_id(String sex_id) {
 		this.sex_id = sex_id;
 	}
 
-	public Integer getTel() {
+	public String getTel() {
 		return tel;
 	}
 
-	public void setTel(Integer tel) {
+	public void setTel(String tel) {
 		this.tel = tel;
 	}
 
@@ -100,27 +87,27 @@ public class Stu {
 		this.email = email;
 	}
 
-	public Integer getClass_id() {
+	public String getClass_id() {
 		return class_id;
 	}
 
-	public void setClass_id(Integer class_id) {
+	public void setClass_id(String class_id) {
 		this.class_id = class_id;
 	}
 
-	public Integer getCollege_id() {
+	public String getCollege_id() {
 		return college_id;
 	}
 
-	public void setCollege_id(Integer college_id) {
+	public void setCollege_id(String college_id) {
 		this.college_id = college_id;
 	}
 
-	public Integer getStatus_id() {
+	public String getStatus_id() {
 		return status_id;
 	}
 
-	public void setStatus_id(Integer status_id) {
+	public void setStatus_id(String status_id) {
 		this.status_id = status_id;
 	}
 

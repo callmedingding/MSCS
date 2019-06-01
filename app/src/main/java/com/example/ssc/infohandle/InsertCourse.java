@@ -1,7 +1,6 @@
 package com.example.ssc.infohandle;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -9,6 +8,8 @@ import android.widget.EditText;
 import com.example.a11201.godsavemeapplication.R;
 import com.example.ssc.course.Course;
 import com.example.ssc.course.CourseDao;
+import com.example.ssc.course.MyCourse;
+import com.example.ssc.course.MyCourseDao;
 
 
 public class InsertCourse extends Activity {
@@ -24,6 +25,7 @@ public class InsertCourse extends Activity {
 	private EditText courseinsertET7;
 	private EditText courseinsertET8;
 	private EditText courseinsertET9;
+	private EditText courseinsertET10;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,6 +42,7 @@ public class InsertCourse extends Activity {
 		courseinsertET7 = (EditText) findViewById(R.id.courseinsertET7);
 		courseinsertET8 = (EditText) findViewById(R.id.courseinsertET8);
 		courseinsertET9 = (EditText) findViewById(R.id.courseinsertET9);
+		courseinsertET10 = (EditText) findViewById(R.id.courseinsertET10);
 	}
 
 	/*
@@ -63,24 +66,26 @@ public class InsertCourse extends Activity {
 		String course_time_id = courseinsertET8.getText().toString().trim();
 		String classroom_id = courseinsertET9.getText().toString().trim();
 		String time_and_classroom=course_time_id+"-"+classroom_id;
+		String tea_id = courseinsertET10.getText().toString().trim();
 
 		// 封装成课程对象
 		Course course = new Course(course_id, course_name, course_type_id, course_status_id,
 				class_hour, credit,maxnum,course_time_id,classroom_id,time_and_classroom);
-		
+		MyCourse mycourse=new MyCourse(tea_id,course_id);
 		// 调用courseDao插入方法进行插入
 		CourseDao dao = new CourseDao(this);
+		MyCourseDao mycoursedao=new MyCourseDao(this);
 		dao.insert(course);
-
+		mycoursedao.insert(mycourse);
 		/*
 		 * 弹出对话框提示插入成功
 		 */
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("提示");
-		builder.setMessage("成功插入课程信息！");
-		builder.setPositiveButton("确定", null);
-		builder.create();
-		builder.show();
+//		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//		builder.setTitle("提示");
+//		builder.setMessage("成功插入课程信息！");
+//		builder.setPositiveButton("确定", null);
+//		builder.create();
+//		builder.show();
 	}
 
 }

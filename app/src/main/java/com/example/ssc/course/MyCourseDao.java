@@ -23,24 +23,30 @@ public class MyCourseDao {
 		String user_id=mycourse.getUser_id();
 		String course_id=mycourse.getCourse_id();
 
-		if(user_id.substring(0,2)=="stu") {
+		if(user_id.substring(0,3).equals("stu")) {
 			//需判断是否能够选（该类型是否被包含在自己的set中）
 			Cursor cursor_1=db.rawQuery("select * from tb_person where user_id=?",
 					new String[]{user_id+""});
+			cursor_1.moveToFirst();
 			String course_type_set=cursor_1.getString(cursor_1.getColumnIndex("course_type_set"));
 			Cursor cursor_2=db.rawQuery("select * from tb_course where course_id=?",
 					new String[]{course_id+""});
+			cursor_2.moveToFirst();
 			String course_type_id=cursor_2.getString(cursor_2.getColumnIndex("course_type_id"));
 			// 是否还有名额
 			Cursor cursor_3=db.rawQuery("select count(*) from tb_stucourse where course_id=?",new String[]{course_id+""});
+			cursor_3.moveToFirst();
 			int count = cursor_3.getCount();
 			Cursor cursor_4=db.rawQuery("select * from tb_course where course_id=?",new String[]{course_id+""});
+			cursor_4.moveToFirst();
 			int maxnum=cursor_4.getInt(cursor_4.getColumnIndex("maxnum"));
-			if(count<maxnum&&course_type_set.contains(course_type_id)){
+			Cursor cursor_5=db.rawQuery("select * from tb_stucourse where user_id=? and course_id=?",new String[]{user_id,course_id});
+
+			if(count<maxnum&&course_type_set.contains(course_type_id+",")){
 				//可以选
 				db.execSQL("insert into tb_Stucourse values(?,?)", new Object[]{
 						mycourse.getUser_id(), mycourse.getCourse_id()});//选课
-				return 1;
+				return 1;//成功
 			}
 			else if(count>=maxnum){
 				//人数超过上限
@@ -48,25 +54,29 @@ public class MyCourseDao {
 			}else if(!course_type_set.contains(course_type_id)){
 				//不能选该类型课程
 				return 3;
+			} else if (cursor_5.getCount()!=0) {
+				return 6;
 			}
 
-		}else if(course_id.substring(0,2)=="tea"){//老师自己提交开课信息？？？
+		}else if(user_id.substring(0,3).equals("mng")){//管理员在插入课程时也提交开课信息
 			//迁至增设课程处！！！！！！
 			//课程id唯一
 			Cursor cursor_5=db.rawQuery("select * from tb_teacourse where course_id=?",new String[]{course_id+""});
 			if (!cursor_5.moveToFirst()) {
 				db.execSQL("insert into tb_Teacourse values(?,?)", new Object[]{
 						mycourse.getUser_id(), mycourse.getCourse_id()});//老师开设课程
-				return 4;
+				return 4;//似乎没必要，管理员在添加课程时就已经插入了该信息
+			}else {
+				return 5;//已有开课信息无法插入
 			}
 		}
 		db.close();
-		return 0;
+		return 0;//正常？
 	}
 
 	public void delete(MyCourse mycourse) {//退课或取消课程
 		SQLiteDatabase db = myhelper.getWritableDatabase();
-		if(mycourse.getUser_id().contains("stu")) {
+		if(mycourse.getUser_id().substring(0,3).equals("stu")) {
 			db.execSQL("delete from tb_stucourse where user_id=? and course_id=?",
 					new Object[]{mycourse.getUser_id(), mycourse.getCourse_id()});//退选课程
 		}else{
@@ -211,15 +221,16 @@ public class MyCourseDao {
 	
 	public ArrayList<HashMap<String, String>> getAllData(String user_id) {//改
 		SQLiteDatabase db = myhelper.getReadableDatabase();
-		Cursor cursor = db.query("tb_StuCourse", null,"user_id='"+user_id+"'", null, null, null, null);//看着改
+		Cursor cursor = db.rawQuery("select * from tb_StuCourse where user_id=?",new String[]{user_id});//看着改
 		cursor.moveToFirst();
 
 		// 生成动态数组，加入数据
 		ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
 		for (int i = 0; i < cursor.getCount(); i++) {
-			String course_id = Integer.toString(cursor.getInt(cursor.getColumnIndex("course_id")));
-			String course_name = cursor.getString(cursor.getColumnIndex("course_name"));
-			
+			String course_id = cursor.getString(cursor.getColumnIndex("course_id"));
+			Cursor cursor1=db.rawQuery("select * from tb_Course where course_id=?",new String[]{course_id});
+			cursor1.moveToFirst();
+			String course_name = cursor1.getString(cursor1.getColumnIndex("course_name"));
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put("course_id", course_id);
 			map.put("course_name", course_name);

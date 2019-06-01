@@ -21,7 +21,9 @@ import java.util.Map;
 public class MyCourseActivity extends Activity {
 	ListView list;
 	Button backBtn;
-
+	Bundle bundle_from=new Bundle(),bundle_to=new Bundle();
+	ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
+	String my_id="";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,17 +34,15 @@ public class MyCourseActivity extends Activity {
 				WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		list = (ListView) findViewById(R.id.listviews);
-		list = (ListView) findViewById(R.id.listviews);
 		//list.setDivider(null);
 
 		// 调用MyCourseDao查询方法进行查询
 		MyCourseDao dao = new MyCourseDao(this);
 		// 获取列表数据
-		ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
 		//需要个人id
-		Bundle bundle = getIntent().getExtras();
-		String user_id = bundle.getString("user_id");
-		listItem = dao.getAllData(user_id);
+		bundle_from = getIntent().getExtras();
+		my_id = bundle_from.getString("user_id");
+		listItem = dao.getAllData(my_id);
 
 		// 生成适配器的Item和动态数组对应的元素
 
@@ -72,13 +72,14 @@ public class MyCourseActivity extends Activity {
 				Intent intent = new Intent(MyCourseActivity.this,
 						CourseDetailActivity.class);
 				/* 通过Bundle对象存储需要传递的数据 */  
-				Bundle bundle = new Bundle();  
+
 				/*字符、字符串、布尔、字节数组、浮点数等等，都可以传*/  
-				bundle.putString("course_id", course_id);
-				bundle.putString("course_name", course_name);
-				bundle.putString("from", "我的课程");
+				bundle_to.putString("course_id", course_id);//课程id
+				bundle_to.putString("course_name", course_name);//似乎没用
+				bundle_to.putString("my_id",my_id);
+				bundle_to.putString("from", "我的课程");
 				/*把bundle对象assign给Intent*/  
-				intent.putExtras(bundle); 
+				intent.putExtras(bundle_to);
 				startActivity(intent);
 			}
 		});

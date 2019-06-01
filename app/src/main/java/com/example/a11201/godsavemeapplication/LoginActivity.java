@@ -103,7 +103,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
                 login(view);
 //                Intent intent;
-//                intent = new Intent(this, SearchDataActivity.class);
+//                intent = new Intent(this, TestActivity.class);
 //                startActivity(intent);
                 break;
         }
@@ -137,12 +137,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         SQLiteDatabase db=myDBHelper.getWritableDatabase();
 //        Cursor cursor=db.query("tb_Person",new String[]{"user_id","user_key"},"user_id='stu12301'",null,null,null,null);
         String name="";
-        Cursor cursor=db.query("tb_Person",null,"user_id='"+userId+"' and user_key='"+userKey+"'",null,null,null,null);
+        Cursor cursor=db.query("tb_Person",null,"user_id='"+userId+"' and user_key='"+userKey+"' and status_id='1'",null,null,null,null);
 //        for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){
 //            name=cursor.getString(1);
 //        }
         if (!cursor.moveToFirst()) {//要改
-            errorMsg(this, "错误信息", "用户名或密码错误，请重新输入");
+            errorMsg(this, "错误信息", "信息输入错误或账户处于非正常状态，请重新输入");
             Log.e("CURSOR:\n","NULL");
         } else {
             if (realCode.equalsIgnoreCase(codeStr)) {

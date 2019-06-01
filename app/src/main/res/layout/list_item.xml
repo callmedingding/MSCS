@@ -3,23 +3,32 @@
     android:layout_width="fill_parent"
     android:layout_height="62dp"
     android:cacheColorHint="#00000000"
-    android:orientation="vertical" >
+    android:orientation="horizontal" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal" >
+
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/publisher"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
             android:gravity="center_vertical"
             android:textColor="#4a2b01"
             android:textSize="25sp"
             android:textAlignment="center" />
+        <!--android:layout_marginLeft="20dp"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="："/>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="#4a2b01"
+            android:textSize="25sp"
+            android:textAlignment="center" />
+        <!--android:layout_marginLeft="20dp"-->
 
-    </LinearLayout>
 
 </LinearLayout>
